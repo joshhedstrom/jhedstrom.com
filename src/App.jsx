@@ -15,7 +15,7 @@ function App() {
       {/* About Section */}
       <Section>
         <div className="absolute left-8 max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">About</h2>
+          {/* <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">About</h2> */}
           <p className="text-lg md:text-xl leading-relaxed text-black mb-6">
             I'm an accomplished Engineering Manager with proven experience of leading teams through complex technical modernization and transformation. I've architected and implemented cutting-edge, composable tech stacks that drive business agility and scalability.
           </p>
@@ -27,20 +27,49 @@ function App() {
 
       {/* Contact Section */}
       <Section>
-        <div className="absolute left-8 max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">let's connect</h2>
-          <div className="space-y-4">
+        <div className="absolute left-8">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">connect</h2>
+          <div className="flex gap-8">
             <a
-              href="mailto:your.email@example.com"
-              className="block text-lg text-black hover:underline"
+              href="mailto:josh.hedstrom@protonmail.com"
+              className="text-black hover:opacity-60 transition-opacity"
+              aria-label="Email"
             >
-              josh.hedstrom@protonmail.com
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
             </a>
             <a
               href="https://www.linkedin.com/in/josh-hedstrom/"
-              className="block text-lg text-black hover:underline"
+              className="text-black hover:opacity-60 transition-opacity"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              linkedin
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
             </a>
           </div>
         </div>
