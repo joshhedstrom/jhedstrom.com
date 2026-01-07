@@ -1,6 +1,6 @@
 function Section({ children }) {
   return (
-    <section className="h-screen snap-start flex items-center justify-center bg-[#faf0e6]">
+    <section className="h-screen snap-start flex items-center justify-center bg-[#faf0e6] relative">
       {children}
     </section>
   )
