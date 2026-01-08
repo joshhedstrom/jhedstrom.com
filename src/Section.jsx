@@ -1,9 +1,9 @@
 function Section({ children }) {
   return (
-    <section className="h-screen snap-start flex items-center justify-center bg-[#faf0e6] relative">
+    <section className="h-screen flex items-center justify-center relative z-20">
       {children}
     </section>
-  )
+  );
 }
 
-export default Section
+export default Section;
