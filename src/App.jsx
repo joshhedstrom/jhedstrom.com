@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Section from "./Section";
+import IconCloud from "./IconCloud";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -27,7 +28,8 @@ function App() {
   return (
     <div
       ref={scrollContainerRef}
-      className="h-screen overflow-y-scroll relative bg-[#faf0e6]"
+      className="h-screen overflow-y-scroll relative bg-[#faf0e6] snap-y snap-mandatory"
+      style={{ scrollBehavior: "smooth" }}
     >
       {/* Oval radial gradient background */}
       <div
@@ -38,7 +40,7 @@ function App() {
       />
       {/* Hero Section - Name */}
       <Section>
-        <div className="absolute bottom-8 left-8">
+        <div className="pl-8">
           <h1 className="text-4xl md:text-5xl font-light tracking-tight text-black lowercase">
             josh hedstrom
           </h1>
@@ -47,27 +49,31 @@ function App() {
 
       {/* About Section */}
       <Section>
-        <div className="absolute left-8 max-w-2xl">
-          {/* <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">About</h2> */}
-          <p className="text-lg md:text-xl leading-relaxed text-black mb-6">
-            I'm an accomplished Engineering Manager with proven experience of
-            leading teams through complex technical modernization and
-            transformation. I've architected and implemented cutting-edge,
-            composable tech stacks that drive business agility and scalability.
-          </p>
-          <p className="text-lg md:text-xl leading-relaxed text-black">
-            I lead with rapid execution and clear communication across all
-            organizational levels. I've successfully orchestrated
-            cross-department initiatives to deliver business critical projects.
-            I lead agile, fast moving teams that ship modern products to serve
-            as a catalyst for business growth.
-          </p>
+        <div className="flex flex-col lg:flex-row gap-12 items-center px-8 max-w-7xl w-full">
+          <div className="flex-1 max-w-2xl">
+            <p className="text-lg md:text-xl leading-relaxed text-black mb-6">
+              I'm an accomplished Engineering Manager with proven experience of
+              leading teams through complex technical modernization and
+              transformation. I've architected and implemented cutting-edge,
+              composable tech stacks that drive business agility and scalability.
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed text-black">
+              I lead with rapid execution and clear communication across all
+              organizational levels. I've successfully orchestrated
+              cross-department initiatives to deliver business critical projects.
+              I lead agile, fast moving teams that ship modern products to serve
+              as a catalyst for business growth.
+            </p>
+          </div>
+          <div className="flex-1 flex items-center justify-center">
+            <IconCloud />
+          </div>
         </div>
       </Section>
 
       {/* Contact Section */}
       <Section>
-        <div className="absolute left-8">
+        <div className="pl-8">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-black">
             connect
           </h2>
